@@ -18,6 +18,7 @@
         fish
         argocd
         krew
+        tmux
       ];
     };
   };

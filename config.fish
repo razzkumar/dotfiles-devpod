@@ -32,7 +32,6 @@ fish_vi_key_bindings
 alias gst 'git status'
 alias gd 'git diff'
 alias lg 'lazygit'
-alias fuckyou "git push --force"
 
 function current_branch  
     set ref (git symbolic-ref HEAD 2> /dev/null); or \
@@ -42,4 +41,21 @@ end
 
 alias ggpull='git pull origin (current_branch)'
 alias ggpush='git push origin (current_branch)'
+
+alias kc "kubectx"
+alias kn "kubens"
+
+# me lazy
+alias c "clear"
+alias k "kubectl"
+alias x "exit"
+alias v "nvim"
+alias vi "nvim"
+alias vim "nvim"
+alias tf "terraform"
+alias tga "terragrunt run-all"
+alias tg "terragrunt"
+
+# My dirs
+alias cf "cd $HOME/.config && ls -a"
 
