@@ -1,0 +1,42 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+command_timeout=6000
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[👉](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol="[😥](bold green)" 
+vimcmd_symbol="[](bold green)" 
+
+[aws]
+disabled = true
+[azure]
+disabled = true
+[gcloud]
+disabled = true
+format = '[$symbol$active]($style) '
+style = 'bold yellow'
+# [kubernetes]
+# symbol = "[☸ ](bold green)"
+# format = '[$context\($namespace\)](green) '
+# # format = '[\[$symbol$namespace\]]($style) in '
+# disabled = false
+# detect_files = ['k8s',"*.yaml","*.yml"]
+# detect_extensions = ['k8s',"*.yaml","*.yml"]
+# detect_folders = ['k8s','charts']
+# [kubernetes.context_aliases]
+# "dev.local.cluster.k8s" = "dev"
+# ".*/openshift-cluster/.*" = "openshift"
+# "gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+# "do*_(?P<var_cluster>[\\w-]+)" = "do-$var_cluster"
+# [kubernetes.user_aliases]
+# "dev.local.cluster.k8s" = "dev"
+
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+disabled = true
+detect_files=["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
