@@ -10,6 +10,7 @@
         fd
         ripgrep
         fzf
+        gh
         lazygit
         kubectl
         kubectx

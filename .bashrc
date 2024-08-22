@@ -11,5 +11,5 @@ set -o vi
 # keybinds
 bind -x '"\C-l":clear'
 
-tmux a -t Main || tmux -f ~/.tmux.conf new -s Main
+#tmux a -t Main || tmux -f ~/.tmux.conf new -s Main
 
