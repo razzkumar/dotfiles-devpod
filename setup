@@ -3,14 +3,14 @@
 export XDG_CONFIG_HOME=$HOME/.config
 
 mkdir -p "$XDG_CONFIG_HOME"
-mkdir -p "$XDG_CONFIG_HOME"/{nixpkgs,fish}
+mkdir -p "$XDG_CONFIG_HOME"/{fish,nix}
 
 ln -sf "$PWD/.bashrc" $HOME/.bashrc
 ln -sf "$PWD/.inputrc" $HOME/.inputrc
 ln -sf "$PWD/.tmux.conf" $HOME/.tmux.conf
 
 ln -sf "$PWD/config.fish" $XDG_CONFIG_HOME/fish/config.fish
-ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
+ln -sf "$PWD/nix.conf" "$XDG_CONFIG_HOME/nix/nix.conf"
 
 ln -sf $PWD/starship.toml $XDG_CONFIG_HOME/starship.toml
 
